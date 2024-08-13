@@ -1,0 +1,44 @@
+import { useParams } from "react-router-dom";
+
+import Header from "../../components/Header";
+import "./EditAddress.css";
+
+const EditAddress = () => {
+  const { addressId } = useParams();
+
+  return (
+    <>
+      <Header />
+      <main>
+        <section>
+          <h2>{addressId !== "new" ? "Edit Address" : "Add New Address"}</h2>
+          <div>
+            <form>
+              <div>
+                <label htmlFor="buildingNumberInput">Building Number:</label>
+                <input type="text" id="buildingNumberInput" />
+              </div>
+              <div>
+                <label htmlFor="streetNameInput">Street Name:</label>
+                <input type="text" id="streetNameInput" />
+              </div>
+              <div>
+                <label htmlFor="locationInput">Location:</label>
+                <input type="text" id="locationInput" />
+              </div>
+              <div>
+                <label htmlFor="cityInput">City:</label>
+                <input type="text" id="cityInput" />
+              </div>
+              <div>
+                <label htmlFor="pincodeInput">Pi</label>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+};
+
+export default EditAddress;

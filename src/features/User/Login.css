@@ -1,0 +1,36 @@
+.login-hero {
+  background-color: #F5F1D6;
+  min-height: 35rem;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  font-family: 'Couisine', monospace;
+}
+
+.login-container > h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.login-container > h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form-btn {
+  background-color: #1A1423;
+  font-family: inherit;
+  border: 0;
+  color: white;
+  padding: 0.35rem;
+}
+
+.login-message-alert {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}

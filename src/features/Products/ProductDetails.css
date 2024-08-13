@@ -1,0 +1,115 @@
+.product-details-main {
+  background-color: #EDECE5;
+  font-family: 'Couisine', monospace;
+  padding: 3rem 5rem;
+  min-height: 35rem;
+}
+
+.product-details-main > h4 {
+  margin-bottom: 1rem;
+  color: #797453;
+}
+.product-name {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.product-details-container {
+  display: flex;
+  margin: 2rem 0;
+  gap: 4rem;
+}
+
+.product-details-img {
+  width: 450px;
+  height: 500px;
+}
+.product-details-name > h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.product-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.product-details-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: #FCA311;
+  width: max-content;
+  padding: 0 0.5rem;
+}
+
+.product-details-pricing {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+.product-details-pricing-price {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.product-details-offers {
+  margin: 0.5rem 0;
+}
+.product-details-offers > h3 {
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.product-details-add-to-cart-btn {
+  background-color: #1A1423;
+  color: white;
+  border: none;
+  font-family: inherit;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  transition: 0.2s;
+}
+.product-details-add-to-cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.product-details-btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-actions-btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-actions-btn > button {
+  flex: 1;
+  font-family: 'Couisine', monospace;
+  padding: 0.45rem 0.25rem;
+}
+
+.user-actions-login-btn {
+  background-color: #1A1423;
+  border: none;
+}
+.user-actions-login-btn > a {
+  color: white;
+  text-decoration: none;
+}
+
+.user-actions-wishlist-btn {
+  background-color: #EDECE5;
+  border: 2px solid #797453;
+}
+.user-actions-wishlist-remove-btn {
+  background-color: #1A1423;
+  color: white;
+  border: 0;
+}

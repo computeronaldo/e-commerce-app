@@ -1,0 +1,18 @@
+.wishlist-main {
+  min-height: 40rem;
+  background-color: #EDECE5;
+  font-family: "Couisine", monospace;
+}
+.wishlist-container {
+  padding: 3rem 5rem;
+}
+.wishlist-container > h2 {
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.wishlist-error {
+  text-align: center;
+}

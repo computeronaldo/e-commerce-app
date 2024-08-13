@@ -1,0 +1,17 @@
+.order-history-main {
+  background-color: #F5F1D6;
+  min-height: 35rem;
+  font-family: "Couisine", monospace;
+  padding: 2rem 5rem;
+}
+
+.order-history-container {
+  padding: 1rem 0;
+}
+
+.order-history-container > h3 {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

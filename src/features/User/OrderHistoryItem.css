@@ -1,0 +1,20 @@
+.order-history-item-main {
+  border: 2px solid #797453;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.order-history-item-main > h4 {
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.order-history-item-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.order-history-item-total-price {
+  margin: 0.5rem 0;
+}

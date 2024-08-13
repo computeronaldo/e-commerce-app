@@ -1,0 +1,244 @@
+.main {
+  background-color: #F5F1D6;
+  min-height: 40rem;
+}
+
+.container {
+  display: flex;
+  min-height: inherit;
+}
+
+.filters-section {
+  width: 20%;
+  border-right: 1.5px solid #797453;
+  padding: 2rem 1rem;
+}
+
+.filters-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Couisine', monospace;
+}
+
+.filters-head > h4 {
+  font-weight: 600;
+}
+
+.filters-head > button {
+  background-color: inherit;
+  text-decoration: underline;
+  border: 0;
+  font-family: inherit;
+}
+
+.categories-filter {
+  margin: 1rem 0;
+  font-family: 'Couisine', monospace;
+  color: #797453;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.categories-filter > h4 {
+  font-weight: 550;
+}
+
+.categories-filter-list-item {
+  display: flex;
+  gap: 0.3rem;
+}
+
+
+.categories-filter-list-item-input:checked {
+  accent-color: black;
+}
+
+.categories-filter-list-item-input:checked + .categories-filter-list-item-label {
+  font-weight: 600;
+}
+
+.ratings-filter {
+  maring: 2rem 0;
+  color: #797453;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Couisine', monospace;
+}
+
+.ratings-filter > h4 {
+  font-weight: 550;
+}
+
+.ratings-filter-item {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.ratings-filter-item-input:checked {
+  accent-color: black;
+}
+
+.ratings-filter-item-input:checked + .ratings-filter-item-label {
+  font-weight: 550;
+}
+
+.sorting-filter {
+  margin: 2rem 0;
+  color: #797453;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Couisine', monospace;
+}
+
+.sorting-filter > h4 {
+  font-weight: 550;
+}
+
+.sorting-filter-item {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.sorting-filter-item-input:checked {
+  accent-color: black;
+}
+
+.sorting-filter-item-input:checked + .sorting-filter-item-label {
+  font-weight: 550;
+}
+
+.products {
+  flex: 1;
+  padding: 2rem 4rem;
+  background-color: #EDECE5;
+}
+
+.products-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-section > h3 {
+  font-family: 'Couisine', monospace;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.product-grid-item {
+  margin: 1rem 0;
+  border: 2px solid #797453;
+}
+
+.products-grid-empty {
+  font-family: monospace;
+}
+
+.product-card {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.product-card:hover {
+  box-shadow: -6px 5px #FFA666;
+}
+
+.product-card-img-section {
+  position: relative;
+}
+
+.product-card-img-section > span {
+  position: absolute;
+  font-family: monospace;
+  right: 10px;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #FCA311;
+  padding: 0 0.2rem;
+  border-radius: 8px;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+}
+
+.product-card-body {
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  gap: 0.5rem;
+  padding: 1rem 0.2rem 0rem 0.2rem;
+  justify-content: space-between;
+}
+
+.product-card-body > h5 {
+  text-align: left;
+  width: 100%;
+}
+
+.product-card-body-title {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+.product-card-body-title:hover {
+  cursor: pointer;
+}
+
+.product-price {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.product-actual-price {
+  text-decoration: line-through;
+}
+
+.product-discount-rate {
+  font-weight: bolder;
+  background-color: #FCA311;
+  padding: 0 0.2rem;
+  transform: skew(-5deg);
+  height: max-content;
+}
+
+.product-card-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-card-btn {
+  margin: 0.5rem 0;
+  background-color: #292525;
+  color: white;
+  border: 0;
+  width: 100%;
+  font-family: inherit;
+  padding: 0.5rem 0.5rem;
+  transition: 0.2s;
+}
+
+.product-card-btn:hover {
+  transform: scale(1.05);
+}
