@@ -9,7 +9,8 @@ export const fetchCategories = createAsyncThunk(
         "https://e-commerce-app-backend-nu.vercel.app/categories",
       );
 
-      if (response.statusText != "OK") {
+      console.log(response);
+      if (response.status != 200) {
         throw new Error(response);
       }
 
@@ -29,7 +30,7 @@ export const fetchProducts = createAsyncThunk(
         "https://e-commerce-app-backend-nu.vercel.app/products",
       );
 
-      if (response.statusText != "OK") {
+      if (response.status != 200) {
         throw new Error(response);
       }
 

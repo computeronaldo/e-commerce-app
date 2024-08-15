@@ -13,6 +13,8 @@ export default function App() {
     (state) => state.products,
   );
 
+  console.log(categories);
+  
   useEffect(() => {
     dispatch(fetchCategories());
   }, []);
