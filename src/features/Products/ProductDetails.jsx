@@ -24,7 +24,7 @@ export default function ProductDetails() {
     loading,
     error,
   } = useFetch(
-    `https://8037780b-a0f1-4609-a1ce-7b6b2f72eab3-00-34jpps012tkgs.sisko.replit.dev/products/${productId}`,
+    `https://e-commerce-app-backend-nu.vercel.app/products/${productId}`,
   );
 
   const product = data && data.data;

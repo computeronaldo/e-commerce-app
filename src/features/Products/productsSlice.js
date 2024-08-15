@@ -6,7 +6,7 @@ export const fetchCategories = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        "https://8037780b-a0f1-4609-a1ce-7b6b2f72eab3-00-34jpps012tkgs.sisko.replit.dev/categories",
+        "https://e-commerce-app-backend-nu.vercel.app/categories",
       );
 
       if (response.statusText != "OK") {
@@ -26,7 +26,7 @@ export const fetchProducts = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        "https://8037780b-a0f1-4609-a1ce-7b6b2f72eab3-00-34jpps012tkgs.sisko.replit.dev/products",
+        "https://e-commerce-app-backend-nu.vercel.app/products",
       );
 
       if (response.statusText != "OK") {
@@ -50,7 +50,7 @@ const fetchProductsByQuery = createAsyncThunk(
       }
 
       const response = await axios.get(
-        `https://8037780b-a0f1-4609-a1ce-7b6b2f72eab3-00-34jpps012tkgs.sisko.replit.dev/search?title=${searchQuery}`,
+        `https://e-commerce-app-backend-nu.vercel.app/search?title=${searchQuery}`,
       );
 
       return response.data;
