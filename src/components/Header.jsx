@@ -8,7 +8,7 @@ import { FaRegUser } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { debouncedFetchProducts } from "../features/Products/productsSlice";
 import { logoutUser } from "../features/User/userSlice";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import "./Header.css";
 
@@ -23,12 +23,6 @@ const Header = () => {
 
   const { cart } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
-
-  useEffect(() => {
-    if(!user) {
-      navigate("/");
-    }
-  }, [user]);
   
   const handleQueryChange = (query) => {
     setSearchQuery(query);
