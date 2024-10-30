@@ -189,6 +189,9 @@ const userSlice = createSlice({
     resetOrderStatus: (state, _action) => {
       state.orderStatus = null;
     },
+    logoutUser: (state, _action) => {
+      state.user = null;
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(registerUser.fulfilled, (state, action) => {
@@ -323,5 +326,6 @@ export const {
   resetEditAddressForm,
   selectAddress,
   resetOrderStatus,
+  logoutUser
 } = userSlice.actions;
 export default userSlice;
