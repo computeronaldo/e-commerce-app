@@ -115,7 +115,7 @@ const Header = () => {
             </button>
           )}
           {user && (
-            <button className="login-btn" onClick={handleLogout} >
+            <button className="login-btn" styles={{ color: 'white' }} onClick={handleLogout} >
               Logout
             </button>
           )}
