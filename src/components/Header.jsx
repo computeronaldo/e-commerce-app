@@ -17,6 +17,12 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const [searchQuery, setSearchQuery] = useState("");
+  
+  const { searchedProducts, searchedProductsLoading, searchedProductsError } =
+    useSelector((state) => state.products);
+
+  const { cart } = useSelector((state) => state.cart);
+  const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
     if(!user) {
@@ -53,12 +59,6 @@ const Header = () => {
     dispatch(logoutUser());
   }
   
-  const { searchedProducts, searchedProductsLoading, searchedProductsError } =
-    useSelector((state) => state.products);
-
-  const { cart } = useSelector((state) => state.cart);
-  const { user } = useSelector((state) => state.user);
-
   const itemsCount =
     cart !== undefined
       ? cart.reduce((acc, cur) => {
