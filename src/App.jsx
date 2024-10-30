@@ -53,7 +53,7 @@ export default function App() {
         </div>
         <div className="promo-cards">
           <div className="promo-card">
-            <img src="https://s3-alpha-sig.figma.com/img/fe14/415d/464018ba1d0295f41b6c56c9b15d0da6?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P48cUkTbK6qR5n6GDdXyeW1BZbgdx-mJz0bHK-mVvgpDQiVc2b9m7DwiV3ikljcsGi8nYRUdq5JgwpZ~G2hUUOV8~fZwA1X6I4ByFEWDlBXRHVd57UYPPAz-pWe0YO8mTh2h7-9m-nhJjlcNGoFDj9mmfSFyx6VxXmtvN-bBtDmB6SKQbJyq0E5NJ~-lbIyiHVwkuisEQ2CBfbQR3b7NLxyoWMzP1e3Srgh~bNnulXqL-xhk-N5oXiHh~4PQlYnyBHauDIDkL5XjO8QEHarneD6buSU4RuRxoUBgMPilc4MJBfgBr8roS7pgN04CtqF8BgU1o0TfJ91kfnWp4RHqVQ__" />
+            <img src="https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=600" />
             <div className="promo-details">
               <p>New Arrivals</p>
               <h2>Summer Collections</h2>
@@ -65,7 +65,7 @@ export default function App() {
             </div>
           </div>
           <div className="promo-card">
-            <img src="https://s3-alpha-sig.figma.com/img/8b73/a365/d0e1b53845d493ea11a12d4db9ea2584?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Zjt8eQm6SodqTVLbsX3V5J8cJGjeUmoqahpoLPl~y9ec1m-xM2SbiiRWuVRAP-TKK-LM2vS5-jSMqtdj1CZ~Mb3mwMJEg4dcsTERuVYI9mbftdjCaQwxYJiONAgEh7Di9-ggnnrrPOEsg2HANUvEDYNVQlDpAytfgzL-dDCoDEEwaYKP-VgzDcSvrDbOs3rSqz3cL1goGrKVcPxxnY0TVUWbAErUSSL6WykiPxRfNdzrIWrKPekTRctZd0UvSb9mP0ahxFGM33HBkNWS5QsN2~T2fpn0Y1746D6RNXvqajdjUmBQR0Ug5s5A1ZrOvd3y4BXPKTVbj6oFn4JDLplbdw__" />
+            <img src="https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
             <div className="promo-details">
               <p>New Arrivals</p>
               <h2>Summer Collections</h2>
