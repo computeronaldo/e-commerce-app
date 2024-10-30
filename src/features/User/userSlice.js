@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const BASE_URL = 'https://e-commerce-app-backend-nu.vercel.app';
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (userInfo, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "https://e-commerce-app-backend-nu.vercel.app/register",
+        `${BASE_URL}/register`,
         userInfo,
       );
 
@@ -25,7 +26,7 @@ export const loginUser = createAsyncThunk(
   async (username, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "https://e-commerce-app-backend-nu.vercel.app/login",
+        `${BASE_URL}/login`,
         { username },
       );
 
@@ -44,7 +45,7 @@ export const addToWishlist = createAsyncThunk(
   async ({ username, productId }) => {
     try {
       const response = await axios.post(
-        "https://e-commerce-app-backend-nu.vercel.app/wishlist",
+        `${BASE_URL}/wishlist`,
         { username, productId },
       );
       return response.data;
@@ -59,7 +60,7 @@ export const removeFromWishlist = createAsyncThunk(
   async ({ username, productId }) => {
     try {
       const response = await axios.delete(
-        "https://e-commerce-app-backend-nu.vercel.app/wishlist",
+        `${BASE_URL}/wishlist`,
         {
           data: { username, productId },
         },
@@ -76,7 +77,7 @@ export const addNewAddress = createAsyncThunk(
   async ({ username, newAddress }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "https://e-commerce-app-backend-nu.vercel.app/address",
+        `${BASE_URL}/address`,
         { username, address: newAddress },
       );
       return response.data;
@@ -94,7 +95,7 @@ export const editAddress = createAsyncThunk(
   async ({ username, addressId, newAddress }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `https://e-commerce-app-backend-nu.vercel.app/address/${addressId}`,
+        `${BASE_URL}/address/${addressId}`,
         { username, address: newAddress, addressId },
       );
       return response.data;
@@ -112,7 +113,7 @@ export const deleteAddress = createAsyncThunk(
   async ({ username, addressId }) => {
     try {
       const response = await axios.delete(
-        `https://e-commerce-app-backend-nu.vercel.app/address/${addressId}`,
+        `${BASE_URL}/address/${addressId}`,
         { data: { username } },
       );
       return response.data;
@@ -127,7 +128,7 @@ export const placeOrder = createAsyncThunk(
   async ({ orderInfo }) => {
     try {
       const response = await axios.post(
-        "https://e-commerce-app-backend-nu.vercel.app/order",
+        `${BASE_URL}/order`,
         orderInfo,
       );
       return response.data;
@@ -142,7 +143,7 @@ export const userOrders = createAsyncThunk(
   async ({ userId }, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `https://e-commerce-app-backend-nu.vercel.app/order/${userId}`,
+        `${BASE_URL}/order/${userId}`,
       );
       return response.data;
     } catch (error) {
