@@ -7,6 +7,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { debouncedFetchProducts } from "../features/Products/productsSlice";
+import { logoutUser } from "../features/User/userSlice";
 import { useState } from "react";
 
 import "./Header.css";
@@ -14,9 +15,16 @@ import "./Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { user } = useSelector(state => state.user);
 
   const [searchQuery, setSearchQuery] = useState("");
 
+  useEffect(() => {
+    if(!user) {
+      navigate("/");
+    }
+  }, [user]);
+  
   const handleQueryChange = (query) => {
     setSearchQuery(query);
     dispatch(debouncedFetchProducts(query));
@@ -41,6 +49,11 @@ const Header = () => {
       navigate("/user");
     }
   };
+
+  const handleLogout = () => {
+    dispatch(logoutUser());
+  }
+  
   const { searchedProducts, searchedProductsLoading, searchedProductsError } =
     useSelector((state) => state.products);
 
@@ -92,12 +105,6 @@ const Header = () => {
                   })}
                 </div>
               )}
-            {/* {(searchedProductsError ||
-              (searchQuery !== "" &&
-                searchedProductsLoading === "idle" &&
-                searchedProducts.length === 0)) && (
-              <div className="searched-products-div">No Products Found</div>
-            )} */}
             {searchedProductsError && (
               <div className="searched-products-div">No Products Found</div>
             )}
@@ -115,8 +122,8 @@ const Header = () => {
             </button>
           )}
           {user && (
-            <button className="login-btn">
-              <NavLink to="/logout">Logout</NavLink>
+            <button className="login-btn" onClick={handleLogout} >
+              Logout
             </button>
           )}
           <div className="cart-count">
