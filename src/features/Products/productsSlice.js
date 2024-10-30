@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const BASE_URL = 'https://e-commerce-app-backend-nu.vercel.app';
 export const fetchCategories = createAsyncThunk(
   "products/fetchCategories",
   async () => {
     try {
       const response = await axios.get(
-        "https://e-commerce-app-backend-nu.vercel.app/categories",
+        `${BASE_URL}/categories`,
       );
 
       console.log(response);
@@ -27,7 +28,7 @@ export const fetchProducts = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        "https://e-commerce-app-backend-nu.vercel.app/products",
+        `${BASE_URL}/products`,
       );
 
       if (response.status != 200) {
@@ -51,7 +52,7 @@ const fetchProductsByQuery = createAsyncThunk(
       }
 
       const response = await axios.get(
-        `https://e-commerce-app-backend-nu.vercel.app/search?title=${searchQuery}`,
+        `${BASE_URL}/search?title=${searchQuery}`,
       );
 
       return response.data;
