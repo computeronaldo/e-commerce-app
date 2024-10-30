@@ -15,7 +15,6 @@ import "./Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user } = useSelector(state => state.user);
 
   const [searchQuery, setSearchQuery] = useState("");
 
